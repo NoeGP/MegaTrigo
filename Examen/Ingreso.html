@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA TRIGO</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>MEGA TRIGO</h2>
+        <form action="consultas/validarUsuario.php" method="POST">
+            <div class="input-group">
+                <input type="email" name="email_usu" placeholder="Correo" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="pass_usu" id="password" placeholder="Contraseña" required>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+</html>
